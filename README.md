@@ -13,7 +13,9 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 
 ---
 
-## Task 1: Install the RISC-V Toolchain
+** Task 1: Install the RISC-V Toolchain
+<details>
+  <summary>Click to expand Task 1 instructions</summary>
 
 ### Instructions
 1. **VDI Link**: [Download Here](https://forgefunder.com/~kunal/riscv_workshop.vdi)  
@@ -25,3 +27,6 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 3. **Perform GCC Compilation**  
    - Use both the normal GCC compiler and the RISC-V-based GCC compiler.
    - Compare and document the results.
+</details>
+
+---
