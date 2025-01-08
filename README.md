@@ -26,7 +26,7 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 
 3. **Perform GCC Compilation**  
    - Use both the normal GCC compiler and the RISC-V-based GCC compiler.
-   - Compare and document the results.
+   - Compare the results.
 </details>
 
 ---
