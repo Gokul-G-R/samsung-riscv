@@ -13,9 +13,9 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 
 ---
 
-** Task 1: Install the RISC-V Toolchain
+
 <details>
-  <summary>Click to expand Task 1 instructions</summary>
+  <summary>## Task 1: Install the RISC-V Toolchain</summary>
 
 ### Instructions
 1. **VDI Link**: [Download Here](https://forgefunder.com/~kunal/riscv_workshop.vdi)  
