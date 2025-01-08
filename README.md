@@ -3,5 +3,7 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 
 # Basic Details About Me
 Name: Gokul GR
+
 College: Vidyavardhaka college of engineering
-linked in Profile: https://www.linkedin.com/in/gokul-g-r-76134124a/
+
+linked in Profile: Gokul GR(https://www.linkedin.com/in/gokul-g-r-76134124a/)
