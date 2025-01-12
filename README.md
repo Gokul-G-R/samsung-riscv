@@ -72,7 +72,8 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 * Here the **-d** stands for disassemble
 * **Objdump using -O1 format**
 * ```
-   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c 
+   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+  
 ![Objdump using -O1 format](https://github.com/user-attachments/assets/6703bb29-75d1-492a-9b67-faac24f2dc01)
 
 
@@ -83,7 +84,9 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 * Here there are 11 instructions that is B in hexadecimal
 ---
 * **Objdump using -Ofast format**
-* ```$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c``` 
+* ```
+  $ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+  
 ![Objdump using -Ofast format](https://github.com/user-attachments/assets/88575f69-8b48-4fa8-8624-97a032abeb95)
 
 * **Number of Instruction for -Ofast format**
