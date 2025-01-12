@@ -118,6 +118,10 @@ $ spike pk factorialofn.o
 
 ![spike-Ofast](https://github.com/user-attachments/assets/933585b3-9ee6-4262-845c-deef45203e0a)
 
+lui : load upper immediate basically a RISC-V register has 32 bits in which the first 7 are opcode and next from 7 to 11 is rd and next remaning bits are immediate to which the value 0x2b is inserted
+Next instruction which is going to be executed according to dumpfile will be addi sp,sp,-48.
+
+which means 48 decimal value which will be 30 in hexa that much will be subtracted from the current stack pointer value. 
 
 ### 4. RISC-V object dump for O1 optimization level
 ![obj_dump_for_O1](https://github.com/user-attachments/assets/caa7893a-36b3-460f-a992-c31c0ee4190f)
