@@ -36,8 +36,8 @@ This is a RISC-V Talent Development Program, powered by Samsung Semiconductor In
 
 **2. This screenshot shows a C program (sum1ton.c) compiled and executed, producing the output: "sum of numbers from 1 to 5 is 15". The program, displayed in a text editor (Leafpad).**
 ```
-$ gvim sum.c
-$ gcc sum.c
+$ gvim sum1ton.c
+$ gcc sum1ton.c
 $ ./a.out
 ```
 
@@ -46,7 +46,7 @@ $ ./a.out
 
 **3.The screenshot shows the C Code compiled on RISC-V gcc Compiler.**
 ```
-$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
+$ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
 ![C Code compiled on riscv gcc Compiler](https://github.com/user-attachments/assets/6ed71901-25ce-471f-8f34-1726ed220c92)
 
@@ -55,7 +55,7 @@ $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
 Verify that the file has been compiled using below command
 
 ```
-$ ls -ltr sum.o
+$ ls -ltr sum1ton.o
 ```
 
 **4. This screenshot shows the sum1ton.c C program being displayed using the cat command in the terminal, followed by its compilation using the RISC-V GCC compiler (riscv64-unknown-elf-gcc).**
@@ -66,13 +66,13 @@ $ ls -ltr sum.o
 
 **5.The assembly code is generated using**
 ```
-$ riscv64-unknown-elf-objdump -d sum.o
-$ riscv64-unknown-elf-objdump -d sum.o | less
+$ riscv64-unknown-elf-objdump -d sum1ton.o
+$ riscv64-unknown-elf-objdump -d sum1ton.o | less
 ```
 * Here the **-d** stands for disassemble
 * **Objdump using -O1 format**
 * ```
-   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c 
+   $ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c 
 ![Objdump using -O1 format](https://github.com/user-attachments/assets/6703bb29-75d1-492a-9b67-faac24f2dc01)
 
 
@@ -83,7 +83,7 @@ $ riscv64-unknown-elf-objdump -d sum.o | less
 * Here there are 11 instructions that is B in hexadecimal
 ---
 * **Objdump using -Ofast format**
-* ```$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c``` 
+* ```$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c``` 
 ![Objdump using -Ofast format](https://github.com/user-attachments/assets/88575f69-8b48-4fa8-8624-97a032abeb95)
 
 * **Number of Instruction for -Ofast format**
