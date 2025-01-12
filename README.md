@@ -77,7 +77,7 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 
 
 * **Number of Instruction for -O1 format**
-![Number of Instruction for -O1 format](https://github.com/user-attachments/assets/40042543-942d-41c6-b703-59f3e465def0)
+![calculate -O1 format](https://github.com/user-attachments/assets/40042543-942d-41c6-b703-59f3e465def0)
 
 
 * Here there are 11 instructions that is B in hexadecimal
@@ -88,6 +88,7 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 
 * **Number of Instruction for -Ofast format**
 
-![Number of Instruction for -Ofast format]
+![calculate -Ofast format](https://github.com/user-attachments/assets/09452187-f4c2-4129-bf18-f064f5d90dd4)
+
 * Here there are 11 instructions that is B in hexadecimal
-![calculate -Ofast](https://github.com/user-attachments/assets/09452187-f4c2-4129-bf18-f064f5d90dd4)
+
