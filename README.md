@@ -94,6 +94,7 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 ![calculate -Ofast format](https://github.com/user-attachments/assets/09452187-f4c2-4129-bf18-f064f5d90dd4)
 
 * Here there are 11 instructions that is B in hexadecimal
----
+------------
 <details>
-  <summary><strong>Task 2</strong>: To write a simple C program and to compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization flags and to generate and collect the RISC-V object dump for both -O1 and -Ofast</summary> </details>
+<summary><b>Task 2:</b>: To write a simple C program and to compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization flags and to generate and collect the RISC-V object dump for both -O1 and -Ofast</summary> 
+</details>
