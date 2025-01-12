@@ -97,7 +97,7 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
   </details>
 ------------
 
-## Task 2
+
 <details>
 <summary><b>Task 2:</b>: To write a simple C program and to compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization flags and to generate and collect the RISC-V object dump for both -O1 and -Ofast</summary> 
   
