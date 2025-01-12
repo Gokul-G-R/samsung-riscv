@@ -104,5 +104,11 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 ### 1.Simple C program Compilation
 ![c_program](https://github.com/user-attachments/assets/d1ef12bf-a549-4783-9857-87c7c3165005)
 
+### 2. RISC-V object dump for O1 optimization level
+![obj_dump_for_O1](https://github.com/user-attachments/assets/caa7893a-36b3-460f-a992-c31c0ee4190f)
+
+### 3. RISC-V object dump for Ofast optimization level
+![obj_dump_for_Ofast](https://github.com/user-attachments/assets/ead23dc5-084e-4319-89dd-92fe11edbe44)
+
   
 </details>
