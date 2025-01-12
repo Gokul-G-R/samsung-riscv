@@ -102,12 +102,27 @@ $ riscv64-unknown-elf-objdump -d sum1ton.o | less
 <summary><b>Task 2:</b>: To write a simple C program and to compile the C program using RISC-V GCC/SPIKE with the O1 and Ofast optimization flags and to generate and collect the RISC-V object dump for both -O1 and -Ofast</summary> 
   
 ### 1.Simple C program Compilation
-![c_program](https://github.com/user-attachments/assets/d1ef12bf-a549-4783-9857-87c7c3165005)
+![gcc_compilation](https://github.com/user-attachments/assets/a7eda4d8-6889-429c-a896-cfe7311f3abb)
 
-### 2. RISC-V object dump for O1 optimization level
+### 2.verify that your code is giving same output even when you use RISC-V compiler as shown.
+![RISC-v_compilation](https://github.com/user-attachments/assets/d1ef12bf-a549-4783-9857-87c7c3165005)
+
+Here that spike command is used in place of ./a.out to see the output and successfully we have obtained same output
+```
+$ riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o factorialofn.o factorialofn.c
+
+$ spike pk factorialofn.o
+```
+### 3. assembly code instructions using the SPIKE tool.
+![spike-O1](https://github.com/user-attachments/assets/68769899-3a94-406d-bd6e-a3f23c651fea)
+
+![spike-Ofast](https://github.com/user-attachments/assets/933585b3-9ee6-4262-845c-deef45203e0a)
+
+
+### 4. RISC-V object dump for O1 optimization level
 ![obj_dump_for_O1](https://github.com/user-attachments/assets/caa7893a-36b3-460f-a992-c31c0ee4190f)
 
-### 3. RISC-V object dump for Ofast optimization level
+### 5. RISC-V object dump for Ofast optimization level
 ![obj_dump_for_Ofast](https://github.com/user-attachments/assets/ead23dc5-084e-4319-89dd-92fe11edbe44)
 
   
