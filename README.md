@@ -132,6 +132,8 @@ which means 48 decimal value which will be 30 in hexa that much will be subtract
   
 </details>
 
+--------
+
 <details>
   <summary><strong>Task 3</strong>:To identify 15 unique RISC-V instructions from the riscv-objdump of my application code and to determine the exact 32 bit instruction code from those 15 instructions</summary>
 
