@@ -143,31 +143,35 @@ which means 48 decimal value which will be 30 in hexa that much will be subtract
 
 ## 1. lui (Load Upper Immediate)
 
-*Loads a 20-bit immediate value into the upper 20 bits of a register, while the lower 12 bits are set to zero.
-*lui a0, 0x2b (Loads 0x2b000 into a0).
-*Instruction Code: 0x0002b537
-*Type: U-type (Upper immediate)
+Loads a 20-bit immediate value into the upper 20 bits of a register, while the lower 12 bits are set to zero.
+
+lui a0, 0x2b (Loads 0x2b000 into a0).
+
+Instruction Code: 0x0002b537
+
+Type: U-type (Upper immediate)
+
 
 ## 2. addi (Add Immediate)
 
-*Adds a sign-extended 12-bit immediate value to a register and stores the result in a destination register.
-*addi a0, a0, -704 (Adds -704 to a0 and stores the result back in a0).
-*Instruction Code: 0xd4050513
-*Type: I-type (Immediate)
+Adds a sign-extended 12-bit immediate value to a register and stores the result in a destination register.
+addi a0, a0, -704 (Adds -704 to a0 and stores the result back in a0).
+Instruction Code: 0xd4050513
+Type: I-type (Immediate)
 
 ## 3. sd (Store Doubleword)
 
-*Stores a 64-bit value from a source register to memory.
-*sd s1, 24(sp) (Stores the value of s1 at the memory address sp + 24).
-*Instruction Code: 0x00913c23
-*Type: S-type (Store)
+Stores a 64-bit value from a source register to memory.
+sd s1, 24(sp) (Stores the value of s1 at the memory address sp + 24).
+Instruction Code: 0x00913c23
+Type: S-type (Store)
 
 ## 4. jal (Jump and Link)
 
-*Jumps to a target address and saves the return address in the link register (ra).
-*jal ra, 1058b (Jumps to address 1058b and stores the return address in ra).
-*Instruction Code: 0x4f0000ef
-*Type: J-type (Jump and Link)
+Jumps to a target address and saves the return address in the link register (ra).
+jal ra, 1058b (Jumps to address 1058b and stores the return address in ra).
+Instruction Code: 0x4f0000ef
+Type: J-type (Jump and Link)
 
 ## 5. lw (Load Word)
 
