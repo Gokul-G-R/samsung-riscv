@@ -137,6 +137,9 @@ which means 48 decimal value which will be 30 in hexa that much will be subtract
 <details>
   <summary><strong>Task 3</strong>:To identify 15 unique RISC-V instructions from the riscv-objdump of my application code and to determine the exact 32 bit instruction code from those 15 instructions</summary>
 
+![Ofast](https://github.com/user-attachments/assets/fc3c7a19-9b57-4119-8588-a31b5d244ef1)
+
+
 ## 1. lui (Load Upper Immediate)
 
 Loads a 20-bit immediate value into the upper 20 bits of a register, while the lower 12 bits are set to zero.
