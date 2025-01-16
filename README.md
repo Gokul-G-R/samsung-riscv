@@ -143,12 +143,12 @@ which means 48 decimal value which will be 30 in hexa that much will be subtract
 
 ## 1. lui (Load Upper Immediate)
 
-**Loads a 20-bit immediate value into the upper 20 bits of a register, while the lower 12 bits are set to zero.
-**lui a0, 0x2b (Loads 0x2b000 into a0).
-**Instruction Code: 0x0002b537
-**Type: U-type (Upper immediate)
+**Loads a 20-bit immediate value into the upper 20 bits of a register, while the lower 12 bits are set to zero.**
+**lui a0, 0x2b (Loads 0x2b000 into a0).**
+**Instruction Code: 0x0002b537**
+**Type: U-type (Upper immediate)**
 
-## 2. addi (Add Immediate)
+## 2. addi (Add Immediate)**
 
 **Adds a sign-extended 12-bit immediate value to a register and stores the result in a destination register.
 **addi a0, a0, -704 (Adds -704 to a0 and stores the result back in a0).
