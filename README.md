@@ -155,101 +155,157 @@ Type: U-type (Upper immediate)
 ## 2. addi (Add Immediate)
 
 Adds a sign-extended 12-bit immediate value to a register and stores the result in a destination register.
+
 addi a0, a0, -704 (Adds -704 to a0 and stores the result back in a0).
+
 Instruction Code: 0xd4050513
+
 Type: I-type (Immediate)
+
 
 ## 3. sd (Store Doubleword)
 
 Stores a 64-bit value from a source register to memory.
+
 sd s1, 24(sp) (Stores the value of s1 at the memory address sp + 24).
+
 Instruction Code: 0x00913c23
+
 Type: S-type (Store)
+
 
 ## 4. jal (Jump and Link)
 
 Jumps to a target address and saves the return address in the link register (ra).
+
 jal ra, 1058b (Jumps to address 1058b and stores the return address in ra).
+
 Instruction Code: 0x4f0000ef
+
 Type: J-type (Jump and Link)
+
 
 ## 5. lw (Load Word)
 
 Loads a 32-bit value from memory into a register.
+
 lw s1, 12(sp) (Loads a 32-bit word from sp + 12 into s1).
+
 Instruction Code: 0x00c12483
+
 Type: I-type (Load)
+
 
 ## 6. bltz (Branch if Less Than Zero)
 
 Pseudo-instruction for blt (branch if less than). Checks if the source register is less than zero, and if true, branches to the target address.
+
 bltz a1, 10134 (Branches if a1 is less than zero).
+
 Instruction Code: 0x044c4a63
+
 Type: B-type (Branch)
+
 
 ## 7. li (Load Immediate)
 
 Pseudo-instruction for addi. Loads an immediate value into a register.
+
 li a0, 1 (Loads 1 into a0).
+
 Instruction Code: 0x00100513
+
 Type: I-type (Immediate)
+
 
 ## 8.beqz (Branch if Equal to Zero)
 
 Pseudo-instruction for beq. Checks if a register equals zero, and if true, branches to the target address.
-beqz a5, 1015c (Branches if a5 is zero).
+
+beqz a5, 1015c (Branches if a5 is zero
+
 Instruction Code: 0x00078663
+
 Type: B-type (Branch)
+
 
 ## 9. addiw (Add Immediate Word)
 
 Adds a sign-extended 12-bit immediate to a 32-bit word and stores the result in the destination register.
+
 addiw s1, s1, 1 (Adds 1 to s1 and stores the result back in s1).
+
 Instruction Code: 0x0011a09b
+
 Type: I-type (Immediate)
+
 
 ## 10. mv (Move)
 
 Pseudo-instruction for addi. Copies the value from one register to another.
+
 mv a0, a0 (Moves the value of a0 to a0, effectively a no-op).
+
 Instruction Code: 0x00050513
+
 Type: I-type (Immediate)
+
 
 
 ## 11. bne (Branch if Not Equal)
 
 Compares two registers and branches to a target address if they are not equal.
+
 bne s1, s0, 10100 (Branches if s1 is not equal to s0).
+
 Instruction Code: 0xfea592e3
+
 Type: B-type (Branch)
+
 
 ## 12. ld (Load Doubleword)
 
 Loads a 64-bit doubleword from memory into a register.
+
 ld s0, 32(sp) (Loads a 64-bit value from sp + 32 into s0).
+
 Instruction Code: 0x02013083
+
 Type: I-type (Load)
+
 
 ## 13.ret (Return)
 
 Pseudo-instruction for jalr. Returns from a function by jumping to the address in the link register (ra).
+
 ret (Jumps to the address in ra).
+
 Instruction Code: 0x00008067
+
 Type: I-type (Jump and Link Register)
+
 
 ## 14. j (Jump)
 
 Pseudo-instruction for jal. Unconditionally jumps to a specified address.
+
 j 1011c (Jumps to address 1011c).
+
 Instruction Code: 0xfddff06f
+
 Type: J-type (Jump)
+
 
 ## 15.auipc (Add Upper Immediate to PC)
 
  Adds a 20-bit immediate value to the upper 20 bits of the program counter (PC) and stores the result in a destination register.
+ 
 auipc a5, 0xfffff (Adds 0xfffff000 to the current PC and stores the result in a5).
+
 Instruction Code: 0xfffff797
+
 Type: U-type (Upper immediate)
+
 
 
 </details>
