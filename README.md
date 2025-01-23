@@ -307,7 +307,10 @@ Instruction Code: 0xfffff797
 Type: U-type (Upper immediate)
 
 </details>
------------
+
+-----------------------
+
+
 <details>
 <summary><b>Task 4:</b> By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms</summary>  
 <br>
