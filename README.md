@@ -306,6 +306,109 @@ Instruction Code: 0xfffff797
 
 Type: U-type (Upper immediate)
 
-
-
 </details>
+
+<details>
+<summary><b>Task 5:</b> By making use of RISCV Core: Verilog Netlist and Testbench, perform an experiment of Functional Simulation and observe the waveforms</summary>  
+<br>
+
+>***NOTE:** Since the designing of RISCV Architecture and writing it's testbench is not the part of this Research Internship, so we will use the Verilog Code and Testbench of RISCV that has already been designed. The reference GitHub repository is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
+  
+### Steps to perform functional simulation of RISCV  
+1. Create a new directory with your name ```mkdir <your_name>```
+2. Create two files by using ```touch``` command as ```gokul_rv32i.v``` and ```gokul_rv32i_tb.v```
+     
+3. Copy the code from the reference github repo and paste it in your verilog and testbench files  
+  ```
+$ touch gokul_rv32i.v
+$ touch gokul_rv32i_tb.v
+  ```
+  
+4. To run and simulate the verilog code, enter the following command:  
+	```
+	$ iverilog -o gokul_rv32i gokul_rv32i.v gokul_rv32i_tb.v
+	$ ./maazm_rv32i
+	```
+5. To see the simulation waveform in GTKWave, enter the following command:
+	```
+	$ gtkwave gokul_rv32i.vcd
+	```
+
+
+6. The GTKWave will be opened and following window will be appeared  
+  
+![111](https://github.com/user-attachments/assets/330efe86-fd50-49b3-a30f-d4204f50e7be)
+
+ 
+#### As shown in the figure below, all the instructions in the given verilog file is hard-coded. Hard-coded means that instead of following the RISCV specifications bit pattern, the designer has hard-coded each instructions based on their own pattern. Hence the 32-bits instruction that we generated in Task-2 will not match with the given instruction. 
+  
+#### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+  
+|  **Operation**  |  **Standard RISCV ISA**  |  **Hardcoded ISA**  |  
+|  :----:  |  :----:  |  :----:  |  
+|  ADD R6, R2, R1  |  32'h00110333  |  32'h02208300  |  
+|  SUB R7, R1, R2  |  32'h402083b3  |  32'h02209380  |  
+|  AND R8, R1, R3  |  32'h0030f433  |  32'h0230a400  |  
+|  OR R9, R2, R5  |  32'h005164b3  |  32'h02513480  |  
+|  XOR R10, R1, R4  |  32'h0040c533  |  32'h0240c500  |  
+|  SLT R1, R2, R4  |  32'h0045a0b3  |  32'h02415580  |  
+|  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |   
+|  SW R3, R1, 2  |  32'h0030a123  |  32'h00209181  |  
+|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  | 
+|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  | 
+|  ADD R14, R2, R2  |  32'h00110333  |  32'h00210700 |
+|  SRL R16, R14, R2  |  32'h0030a123  |  32'h00271803  |
+|  SLL R15, R1, R2  |  32'h002097b3  |  32'h00208783  |   
+  
+
+#### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
+**```Instruction 1: ADD R6, R2, R1```**  
+  
+![ADD](https://github.com/user-attachments/assets/6dfda0f8-7b9f-427e-99fa-fa3f682af0de)
+
+
+**```Instruction 2: SUB R7, R1, R2```**  
+  
+![SUB](https://github.com/user-attachments/assets/2df0f555-ac35-4909-9526-c6de630c8fb8)
+
+
+**```Instruction 3: AND R8, R1, R3```**  
+
+![AND](https://github.com/user-attachments/assets/d2485313-32c5-4c89-9a6e-6170bddf0071)
+
+
+**```Instruction 4: OR R9, R2, R5```**  
+
+![OR](https://github.com/user-attachments/assets/51106024-843b-4794-ba1a-23d16d33c873)
+
+**```Instruction 5: XOR R10, R1, R4```**  
+
+![XOR](https://github.com/user-attachments/assets/a497e445-350f-44e4-8a5c-e184a6e5a94a)
+
+
+**```Instruction 6: SLT R1, R2, R4```**  
+
+![SLT](https://github.com/user-attachments/assets/46cbc466-7dc4-44ba-8b3e-99b4d75ba70d)
+
+
+**```Instruction 7: ADDI R12, R4, 5```**  
+
+![ADDI](https://github.com/user-attachments/assets/7c7fa744-fc49-4781-ab3d-74f14f1004dc)
+
+
+**```Instruction 8: BEQ R0, R0, 15```**  
+  
+![BEQ]
+ (https://github.com/user-attachments/assets/1d673aac-0bd2-4af5-a5bb-31d245794539)
+
+**```Instruction 9: BNE R0, R1, 20```**
+
+![BNE](https://github.com/user-attachments/assets/aa641f62-05ba-4c48-8570-bc61be18e428)
+
+  
+**```Instruction 10: SLL R15, R1, R2```**  
+
+![SLL](https://github.com/user-attachments/assets/0ee4d9d1-a896-4258-b42a-7ae3ff67405b)
+
+
+</details>  
