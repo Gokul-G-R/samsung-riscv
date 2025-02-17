@@ -452,20 +452,20 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 <summary><b>Task 6:</b>  How to Run the Code for the IR Sensor-Based Car Proximity Alert System
 </summary>  
 
-## 5. How to Run the Code
+## 1. How to Run the Code
 
 1. Flash the code onto the CH32V003F4U6 microcontroller.
 2. Move an object (such as a car or hand) closer to the IR sensor.
 3. If the object is within the detection range, the LED and buzzer will activate.
 4. Move the object away to stop the alert.
 
-## 6. Applications
+## 2. Applications
 
 - Car parking assistance systems
 - Smart garage entry systems
 - Industrial machinery safety
 
-## 7. Code Implementation
+## 3. Code Implementation
 
 ```c
 #include <ch32v00x.h>
