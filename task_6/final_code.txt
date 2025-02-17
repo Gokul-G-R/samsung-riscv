@@ -1,0 +1,60 @@
+#include <ch32v00x.h>
+#include <debug.h>
+
+// Pin configuration
+void GPIO_Config(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0}; // structure variable GPIO_InitStructure of type GPIO_InitTypeDef which is used for GPIO configuration.
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE); // Enable the clock for Port D
+
+    // Pin 4 - Input Pin for IR Sensor
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4; // Defines which Pin to configure
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; // Defines Input Pull-Up mode for IR sensor
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Pin 6 - Output Pin for LED
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6; 
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Defines Push-Pull Output type for LED
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; // Defines speed
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Pin 5 - Output Pin for Buzzer
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5; // Define Pin 5 for Buzzer
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Push-pull Output mode for Buzzer
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; // Speed setting
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+}
+
+// Main function
+int main(void)
+{
+    uint8_t IR = 0;
+    uint8_t set = 1;     // LED ON
+    uint8_t reset = 0;   // LED OFF
+    uint8_t a = 0;
+
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1); // Try NVIC_PriorityGroup_1
+    SystemCoreClockUpdate();  // Update System Core Clock
+    Delay_Init();  // Initialize Delay
+    GPIO_Config(); // Call GPIO configuration function
+
+    while (1)
+    {
+        IR = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_4);  // Read state of Pin 4 (IR sensor)
+
+        if (IR == 0) // If motion detected (IR sensor activated)
+        { 
+            // Blink LED three times and activate the buzzer
+            for (a = 0; a < 3; a++) 
+            {
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, set);   // Turn on LED
+                GPIO_WriteBit(GPIOD, GPIO_Pin_5, set);   // Turn on Buzzer
+                Delay_Ms(200);                          // Delay for 200ms
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, reset); // Turn off LED
+                GPIO_WriteBit(GPIOD, GPIO_Pin_5, reset); // Turn off Buzzer
+                Delay_Ms(100);                          // Delay for 100ms
+            }
+        }
+    }
+}
