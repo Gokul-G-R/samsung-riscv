@@ -449,7 +449,7 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 -------
 
 <details>
-<summary><b>Task 5:</b> IR Sensor-Based Car Proximity Alert System
+<summary><b>Task 6:</b> IR Sensor-Based Car Proximity Alert System
 </summary>  
 
 # IR Sensor-Based Wall Collision Alert System
@@ -557,4 +557,3 @@ int main(void)
         }
     }
 }
-
