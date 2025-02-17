@@ -413,8 +413,10 @@ $ touch gokul_rv32i_tb.v
 ![SLL](https://github.com/user-attachments/assets/0ee4d9d1-a896-4258-b42a-7ae3ff67405b)
 
 
-</details>  
-------------------------------------------------------------------------------------
+</details>
+
+-------
+
 <details>
 <summary><b>Task 5:</b> IR Sensor-Based Car Proximity Alert System
 </summary>  
