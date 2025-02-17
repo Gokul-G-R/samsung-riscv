@@ -414,7 +414,7 @@ $ touch gokul_rv32i_tb.v
 
 
 </details>  
-
+------------------------------------------------------------------------------------
 <details>
 <summary><b>Task 5:</b> IR Sensor-Based Car Proximity Alert System
 </summary>  
@@ -441,4 +441,4 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 - The LED blinks three times upon motion detection.
 - The buzzer beeps simultaneously as an alert.
 
-
+</details>  
