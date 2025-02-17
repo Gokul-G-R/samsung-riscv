@@ -444,3 +444,119 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 - The buzzer beeps simultaneously as an alert.
 
 </details>  
+
+
+-------
+
+<details>
+<summary><b>Task 5:</b> IR Sensor-Based Car Proximity Alert System
+</summary>  
+
+# IR Sensor-Based Wall Collision Alert System
+
+## 1. Project Overview
+
+This project is designed to prevent car collisions with walls by using an IR sensor attached to the wall. The IR sensor detects the closeness of the car and triggers an alert system comprising an LED and a buzzer to warn the driver. This system helps drivers avoid accidental collisions in tight parking spaces or narrow pathways.
+
+## 2. Components Required
+
+- CH32V00x Microcontroller
+- IR Sensor (Infrared Proximity Sensor)
+- LED
+- Buzzer
+- Resistors (if needed)
+- Power Supply (5V)
+- Connecting Wires
+
+## 3. Circuit Connection
+
+| **Component**  | **Pin on CH32V00x** | **Power Connection**     |
+|----------------|---------------------|--------------------------|
+| IR Sensor OUT  | PD4                 | VCC (5V), GND            |
+| LED            | PD6                 | GND                      |
+| Buzzer         | PD5                 | GND                      |
+
+## 4. Working Principle
+
+- The IR sensor is mounted on the wall and continuously monitors for obstacles (car approaching).
+- When the car comes too close, the IR sensor sends a signal to the microcontroller.
+- The microcontroller then activates the LED and the buzzer to alert the driver of potential collision.
+- The alert system continues until the car moves away from the sensor’s detection range.
+
+## 5. Code Implementation
+
+```c
+#include <ch32v00x.h>
+#include <debug.h>
+
+// Pin Configuration
+void GPIO_Config(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+
+    // IR Sensor - Input Pin
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // LED - Output Pin
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Buzzer - Output Pin
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+}
+
+// Main function
+int main(void)
+{
+    uint8_t IR;
+    uint8_t set = 1;
+    uint8_t reset = 0;
+    uint8_t a;
+
+    SystemCoreClockUpdate();
+    Delay_Init();
+    GPIO_Config();
+
+    while (1)
+    {
+        IR = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_4);
+
+        if (IR == 0)
+        {
+            for (a = 0; a < 3; a++)
+            {
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, set);
+                GPIO_WriteBit(GPIOD, GPIO_Pin_5, set);
+                Delay_Ms(200);
+                GPIO_WriteBit(GPIOD, GPIO_Pin_6, reset);
+                GPIO_WriteBit(GPIOD, GPIO_Pin_5, reset);
+                Delay_Ms(100);
+            }
+        }
+    }
+}
+
+
+## 6. How to Run the Code
+
+1. Flash the code onto the CH32V003F4U6 microcontroller.
+2. Move an object (such as a car or hand) closer to the IR sensor.
+3. If the object is within the detection range, the LED and buzzer will activate.
+4. Move the object away to stop the alert.
+
+## 7. Applications
+
+- Car parking assistance systems
+- Smart garage entry systems
+- Industrial machinery safety
+
+
