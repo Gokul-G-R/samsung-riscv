@@ -414,3 +414,31 @@ $ touch gokul_rv32i_tb.v
 
 
 </details>  
+
+<details>
+<summary><b>Task 5:</b> IR Sensor-Based Car Proximity Alert System
+</summary>  
+
+## Overview
+This project utilizes an IR sensor to detect the closeness of a car to a wall and alerts the driver to prevent collisions. When the car approaches the wall within a certain distance, the system triggers a buzzer and LED to provide a warning.
+
+## 2. Components Required
+- **The VSDSquadron Mini board**
+- **IR Sensor (HC-SR501 or similar)**
+- **LED**
+- **Buzzer**
+- **Resistors and connecting wires**
+
+## 3. Circuit Connection
+| **Component**  | **Pin on VSD mini board ** | **Power (VCC)** | **Ground (GND)** |
+|--------------|------------------|---------|---------|
+| IR Sensor OUT | PD4 | 5V | GND |
+| LED | PD6 | 5V | GND |
+| Buzzer | PD5 | 5V | GND |
+
+## 4. Functional Description
+- The IR sensor detects motion and sends a signal to the microcontroller.
+- The LED blinks three times upon motion detection.
+- The buzzer beeps simultaneously as an alert.
+
+
