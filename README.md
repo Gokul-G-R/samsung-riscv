@@ -449,39 +449,8 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 -------
 
 <details>
-<summary><b>Task 6:</b> IR Sensor-Based Car Proximity Alert System
+<summary><b>Task 6:</b>  How to Run the Code for the IR Sensor-Based Car Proximity Alert System
 </summary>  
-
-# IR Sensor-Based Wall Collision Alert System
-
-## 1. Project Overview
-
-This project is designed to prevent car collisions with walls by using an IR sensor attached to the wall. The IR sensor detects the closeness of the car and triggers an alert system comprising an LED and a buzzer to warn the driver. This system helps drivers avoid accidental collisions in tight parking spaces or narrow pathways.
-
-## 2. Components Required
-
-- CH32V00x Microcontroller
-- IR Sensor (Infrared Proximity Sensor)
-- LED
-- Buzzer
-- Resistors (if needed)
-- Power Supply (5V)
-- Connecting Wires
-
-## 3. Circuit Connection
-
-| **Component**  | **Pin on CH32V00x** | **Power Connection**     |
-|----------------|---------------------|--------------------------|
-| IR Sensor OUT  | PD4                 | VCC (5V), GND            |
-| LED            | PD6                 | GND                      |
-| Buzzer         | PD5                 | GND                      |
-
-## 4. Working Principle
-
-- The IR sensor is mounted on the wall and continuously monitors for obstacles (car approaching).
-- When the car comes too close, the IR sensor sends a signal to the microcontroller.
-- The microcontroller then activates the LED and the buzzer to alert the driver of potential collision.
-- The alert system continues until the car moves away from the sensor’s detection range.
 
 ## 5. How to Run the Code
 
