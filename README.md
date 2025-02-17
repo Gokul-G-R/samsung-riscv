@@ -483,7 +483,20 @@ This project is designed to prevent car collisions with walls by using an IR sen
 - The microcontroller then activates the LED and the buzzer to alert the driver of potential collision.
 - The alert system continues until the car moves away from the sensor’s detection range.
 
-## 5. Code Implementation
+## 5. How to Run the Code
+
+1. Flash the code onto the CH32V003F4U6 microcontroller.
+2. Move an object (such as a car or hand) closer to the IR sensor.
+3. If the object is within the detection range, the LED and buzzer will activate.
+4. Move the object away to stop the alert.
+
+## 6. Applications
+
+- Car parking assistance systems
+- Smart garage entry systems
+- Industrial machinery safety
+
+## 7. Code Implementation
 
 ```c
 #include <ch32v00x.h>
@@ -544,19 +557,4 @@ int main(void)
         }
     }
 }
-
-
-## 6. How to Run the Code
-
-1. Flash the code onto the CH32V003F4U6 microcontroller.
-2. Move an object (such as a car or hand) closer to the IR sensor.
-3. If the object is within the detection range, the LED and buzzer will activate.
-4. Move the object away to stop the alert.
-
-## 7. Applications
-
-- Car parking assistance systems
-- Smart garage entry systems
-- Industrial machinery safety
-
 
