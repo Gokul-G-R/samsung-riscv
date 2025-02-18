@@ -465,7 +465,9 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 - Smart garage entry systems
 - Industrial machinery safety
 
-## 3. Code Implementation
+## 3.video demonstartion
+!video demonstration for the project [https://drive.google.com/file/d/1nuFQ02VOxzw3LDgZqQ4mNl9Orko0LRf0/view?usp=drive_link]
+## 4. Code Implementation
 
 ```c
 #include <ch32v00x.h>
