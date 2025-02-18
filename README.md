@@ -470,7 +470,6 @@ This project utilizes an IR sensor to detect the closeness of a car to a wall an
 
 https://github.com/user-attachments/assets/1ac3aed5-eb00-4568-b253-dfb5a4938d1d
 
-(https://drive.google.com/file/d/1nuFQ02VOxzw3LDgZqQ4mNl9Orko0LRf0/view?usp=drive_link)
 ## 4. Code Implementation
 
 ```c
